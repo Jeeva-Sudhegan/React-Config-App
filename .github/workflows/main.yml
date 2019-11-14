@@ -19,5 +19,7 @@ jobs:
       run: echo Hello, world!
     - name: Install Dependencies
       run: npm install
+    - name: Format code
+      run: npm run format
     - name: Build application
       run: npm run build
