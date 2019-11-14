@@ -13,10 +13,10 @@ class App extends Component<{},IState> {
         this.setState({checked: !this.state.checked});
     }
     render(): ReactNode {
-        const iconChange = this.state.checked ? ["fas", "check-square"] : ["fas", "square"];
-        const style = {
-            cursor: "pointer"
-        };
+        // const iconChange = this.state.checked ? ["fas", "check-square"] : ["fas", "square"];
+        // const style = {
+        //     cursor: "pointer"
+        // };
         return (
             <div className="App">
                 {/* <FontAwesomeIcon className="home" icon="coffee" /> */}
