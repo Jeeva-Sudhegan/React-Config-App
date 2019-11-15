@@ -5,10 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --open --hot --port 1234",
+    "start": "webpack-dev-server --open --hot",
     "watch": "webpack -w",
     "eslint": "./node_modules/.bin/eslint",
-    "format": ".\\node_modules\\.bin\\eslint --format stylish src"
+    "format": "./node_modules/.bin/eslint --format stylish src"
   },
   "keywords": [],
   "author": "",
