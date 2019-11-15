@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Check whether Script runs
-      run: echo Hello, world!
+      run: echo Hello, world!!
     - name: Install Dependencies
       run: npm install
     - name: Format code
