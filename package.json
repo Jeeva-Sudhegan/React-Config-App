@@ -47,14 +47,5 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jeeva-Sudhegan/React-Config-App.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Jeeva-Sudhegan/React-Config-App/issues"
-  },
-  "homepage": "https://github.com/Jeeva-Sudhegan/React-Config-App#readme",
-  "description": ""
+  }
 }
