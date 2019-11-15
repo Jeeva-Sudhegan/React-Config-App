@@ -1,11 +1,9 @@
-FROM nginx:latest
+FROM ubuntu:latest
 RUN apt-get update -y
 RUN apt-get -y install nodejs && apt-get -y install npm
-COPY . /app
-RUN npm install
-RUN npm run build
-WORKDIR /app/dist
+RUN mkdir -p /app
 EXPOSE 8080
-RUN npm install --save serve
-COPY /app/dist .
-CMD [ "serve" , "" , "" , "" ]
+COPY . /app
+WORKDIR /app
+RUN npm install
+CMD [ "npm" , "run" , "start"]
