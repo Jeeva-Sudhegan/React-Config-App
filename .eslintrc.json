@@ -32,22 +32,14 @@
             "error",
             {
                 "allowEmptyCatch": true
-            },
-        ],
-        "no-implicit-coercion": [
-          "error",
-          {
-            "boolean": false,
-            "number": true,
-            "string": true
-          },
+            }
         ],
         "no-unused-expressions": [
           "error",
           {
             "allowShortCircuit": true,
-            "allowTernary": false,
-          },
+            "allowTernary": false
+          }
         ],
         "no-unused-vars": [
           "error",
@@ -55,7 +47,7 @@
             "vars": "all",
             "args": "after-used",
             "argsIgnorePattern": "(^reject$|^_$)",
-            "varsIgnorePattern": "(^_$)",
+            "varsIgnorePattern": "(^_$)"
           }
         ],
         "strict": ["error", "global"],
