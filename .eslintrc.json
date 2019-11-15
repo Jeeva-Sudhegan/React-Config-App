@@ -34,14 +34,6 @@
                 "allowEmptyCatch": true
             }
         ],
-        "no-implicit-coercion": [
-          "error",
-          {
-            "boolean": false,
-            "number": true,
-            "string": true
-          }
-        ],
         "no-unused-expressions": [
           "error",
           {
