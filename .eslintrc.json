@@ -25,7 +25,46 @@
     ],
     "rules": {
         "semi": ["error", "always"],
-        "linebreak-style":["error","windows"],
-        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx",".tsx"] }]
+        "linebreak-style":["error","unix"],
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx",".tsx"] }],
+        "no-floating-decimal": "error",
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            },
+        ],
+        "no-implicit-coercion": [
+          "error",
+          {
+            "boolean": false,
+            "number": true,
+            "string": true
+          },
+        ],
+        "no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": false,
+          },
+        ],
+        "no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "argsIgnorePattern": "(^reject$|^_$)",
+            "varsIgnorePattern": "(^_$)",
+          }
+        ],
+        "strict": ["error", "global"],
+        "prefer-const": "error",
+        "curly": ["error", "multi-line"],
+
+    // Disabled rules
+        "require-jsdoc": 0,
+        "valid-jsdoc": 0,
+        "arrow-parens": 0
     }
 }
