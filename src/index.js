@@ -8,4 +8,7 @@ import './Components/App/App.css';
 
 // library.add(fab, fas);
 
-render(<App />, document.getElementById('app'));
+render(
+	<App />,
+	document.getElementById('app'),
+);
