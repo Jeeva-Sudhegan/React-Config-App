@@ -55,10 +55,13 @@
         "strict": ["error", "global"],
         "prefer-const": "error",
         "curly": ["error", "multi-line"],
+        "react/jsx-indent": [ 2 , "tab" , { "checkAttributes": true , "indentLogicalExpressions": true}],
 
     // Disabled rules
         "require-jsdoc": 0,
         "valid-jsdoc": 0,
-        "arrow-parens": 0
+        "arrow-parens": 0,
+        "no-tabs": ["error", {"allowIndentationTabs": true} ],
+        "indent": ["error", "tab"]
     }
 }

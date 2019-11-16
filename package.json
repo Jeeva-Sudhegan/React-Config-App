@@ -7,8 +7,9 @@
     "build": "webpack",
     "start": "webpack-dev-server --host 0.0.0.0 --open --hot",
     "watch": "webpack -w",
-    "eslint": "./node_modules/.bin/eslint",
-    "format": ".\\node_modules\\.bin\\eslint --format stylish src"
+    "eslint": "eslint --fix src/",
+    "pretty": "prettier --write src/**/*.{js,jsx,tsx}",
+    "format": "npm run pretty && npm run eslint"
   },
   "keywords": [],
   "author": "",
