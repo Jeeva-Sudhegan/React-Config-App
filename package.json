@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --host 0.0.0.0 --open --hot",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --hot --config webpack.dev.js",
+    "container": "webpack-dev-server --host 0.0.0.0 --open --hot --config webpack.dev.js",
     "watch": "webpack -w",
     "eslint": "eslint --fix src/",
     "pretty": "prettier --write src/**/*.{js,jsx,tsx}",
@@ -19,8 +20,8 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@types/react": "^16.9.11",
@@ -28,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -46,7 +48,8 @@
     "typescript": "^3.7.2",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.2"
   },
   "repository": {
     "type": "git",
