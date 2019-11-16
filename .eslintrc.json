@@ -5,7 +5,8 @@
         "node": true
     },
     "extends": [
-        "airbnb"
+        "airbnb",
+        "plugin:prettier/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -21,10 +22,12 @@
     },
     "plugins": [
         "react",
+        "prettier",
         "@typescript-eslint"
     ],
     "rules": {
         "semi": ["error", "always"],
+        "prettier/prettier": "error",
         "linebreak-style":["error","windows"],
         "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx",".tsx"] }]
     }
