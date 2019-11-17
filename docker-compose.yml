@@ -1,0 +1,5 @@
+version: "3.7"
+services:
+  react-app:
+    image: react-app:v0.1
+    container_name: react-config-app
