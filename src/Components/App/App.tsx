@@ -1,3 +1,4 @@
+import { hot } from "../../../node_modules/react-hot-loader/root";
 import React, {
 	Component,
 	ReactNode,
@@ -55,4 +56,4 @@ class App extends Component<
 	}
 }
 
-export default App;
+export default hot(App);

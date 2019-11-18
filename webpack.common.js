@@ -1,16 +1,23 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+	CleanWebpackPlugin,
+} = require('clean-webpack-plugin');
 
 const config = {
-	// entry: ["react-hot-loader/patch", "./src/index.js"],  for hot reloading
-	entry: './src/index.js',
+	entry: [
+		'react-hot-loader/patch',
+		'./src/index.js',
+	],
+	// entry: './src/index.js',
 	output: {
 		path: path.resolve(
 			__dirname,
 			'dist',
 		),
-		filename: 'bundle.js',
+		filename: '[name].bundle.js',
+		chunkFilename:
+			'[name].bundle.js',
 	},
 	devtool: 'inline-source-map',
 	resolve: {
@@ -45,12 +52,14 @@ const config = {
 	},
 	plugins: [
 		new CleanWebpackPlugin({
-            dry: true,
-            verbose: true,
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: true,
-            cleanAfterBeforeBuildPatterns: ["./**/*.(js|jsx|tsx)"],
-        }),
+			dry: true,
+			verbose: true,
+			cleanStaleWebpackAssets: true,
+			protectWebpackAssets: true,
+			cleanAfterBeforeBuildPatterns: [
+				'./**/*.(js|jsx|tsx)',
+			],
+		}),
 		new HtmlWebpackPlugin({
 			template:
 				'./src/index.html',
