@@ -5,8 +5,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --config webpack.prod.js",
-		"dev": "webpack-dev-server --open --hot --config webpack.dev.js",
-		"container": "webpack-dev-server --host 0.0.0.0 --open --hot --config webpack.dev.js",
+		"dev": "webpack-dev-server --config webpack.dev.js",
+		"container": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
 		"watch": "webpack -w",
 		"eslint": "eslint --fix src/",
 		"prettier": "prettier --check src/**/*.{js,jsx,tsx}",
