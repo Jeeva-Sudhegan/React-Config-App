@@ -18,6 +18,8 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: Format code
+      run: npm run prettier
+    - name: Check for formatting
       run: npm run format
     - name: Build application
       run: npm run build
