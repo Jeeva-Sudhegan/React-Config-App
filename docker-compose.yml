@@ -3,3 +3,4 @@ services:
     react-app:
         image: react-app:v0.1
         container_name: react-config-app
+        hostname: 0.0.0.0

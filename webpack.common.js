@@ -13,7 +13,7 @@ const config = {
 	output: {
 		path: path.resolve(
 			__dirname,
-			"dist",
+			"build",
 		),
 		filename: "[name].bundle.js",
 		chunkFilename:

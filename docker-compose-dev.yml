@@ -7,5 +7,4 @@ services:
             - "8080:8080"
         stdin_open: true
         tty: true
-        hostname: 0.0.0.0
         command: npm run container
