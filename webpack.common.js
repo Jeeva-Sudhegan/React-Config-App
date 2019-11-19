@@ -1,30 +1,30 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {
 	CleanWebpackPlugin,
-} = require('clean-webpack-plugin');
+} = require("clean-webpack-plugin");
 
 const config = {
 	entry: [
-		'react-hot-loader/patch',
-		'./src/index.js',
+		"react-hot-loader/patch",
+		"./src/index.js",
 	],
 	// entry: './src/index.js',
 	output: {
 		path: path.resolve(
 			__dirname,
-			'dist',
+			"dist",
 		),
-		filename: '[name].bundle.js',
+		filename: "[name].bundle.js",
 		chunkFilename:
-			'[name].bundle.js',
+			"[name].bundle.js",
 	},
-	devtool: 'inline-source-map',
+	devtool: "inline-source-map",
 	resolve: {
 		extensions: [
-			'.ts',
-			'.tsx',
-			'.js',
+			".ts",
+			".tsx",
+			".js",
 		],
 	},
 	module: {
@@ -32,20 +32,20 @@ const config = {
 			{
 				test: /\.tsx?$/,
 				exclude:
-					'/node_modules/',
-				use: 'ts-loader',
+					"/node_modules/",
+				use: "ts-loader",
 			},
 			{
 				test: /\.(js)$/,
 				exclude:
-					'/node_modules/',
-				use: 'babel-loader',
+					"/node_modules/",
+				use: "babel-loader",
 			},
 			{
 				test: /\.css$/,
 				use: [
-					'style-loader',
-					'css-loader',
+					"style-loader",
+					"css-loader",
 				],
 			},
 		],
@@ -57,12 +57,12 @@ const config = {
 			cleanStaleWebpackAssets: true,
 			protectWebpackAssets: true,
 			cleanAfterBeforeBuildPatterns: [
-				'./**/*.(js|jsx|tsx)',
+				"./**/*.(js|jsx|tsx)",
 			],
 		}),
 		new HtmlWebpackPlugin({
 			template:
-				'./src/index.html',
+				"./src/index.html",
 		}),
 	],
 };

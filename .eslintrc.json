@@ -1,67 +1,94 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
-    },
-    "extends": [
-        "airbnb",
-        "plugin:prettier/recommended"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "prettier",
-        "@typescript-eslint"
-    ],
-    "rules": {
-        "semi": ["error", "always"],
-        "linebreak-style":["error","unix"],
-        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx",".tsx"] }],
-        "no-floating-decimal": "error",
-        "no-empty": [
-            "error",
-            {
-                "allowEmptyCatch": true
-            }
-        ],
-        "no-unused-expressions": [
-          "error",
-          {
-            "allowShortCircuit": true,
-            "allowTernary": false
-          }
-        ],
-        "no-unused-vars": [
-          "error",
-          {
-            "vars": "all",
-            "args": "after-used",
-            "argsIgnorePattern": "(^reject$|^_$)",
-            "varsIgnorePattern": "(^_$)"
-          }
-        ],
-        "strict": ["error", "global"],
-        "prefer-const": "error",
-        "curly": ["error", "multi-line"],
-        "react/jsx-indent": [ 2 , "tab" , { "checkAttributes": true , "indentLogicalExpressions": true}],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"airbnb",
+		"plugin:prettier/recommended"
+	],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"prettier",
+		"@typescript-eslint"
+	],
+	"rules": {
+		"semi": ["error", "always"],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [
+					".js",
+					".jsx",
+					".tsx"
+				]
+			}
+		],
+		"no-floating-decimal": "error",
+		"no-empty": [
+			"error",
+			{
+				"allowEmptyCatch": true
+			}
+		],
+		"no-unused-expressions": [
+			"error",
+			{
+				"allowShortCircuit": true,
+				"allowTernary": false
+			}
+		],
+		"no-unused-vars": [
+			"error",
+			{
+				"vars": "all",
+				"args": "after-used",
+				"argsIgnorePattern": "(^reject$|^_$)",
+				"varsIgnorePattern": "(^_$)"
+			}
+		],
+		"strict": ["error", "global"],
+		"prefer-const": "error",
+		"curly": [
+			"error",
+			"multi-line"
+		],
+		"react/jsx-indent": [
+			2,
+			"tab",
+			{
+				"checkAttributes": true,
+				"indentLogicalExpressions": true
+			}
+		],
 
-    // Disabled rules
-        "require-jsdoc": 0,
-        "valid-jsdoc": 0,
-        "arrow-parens": 0,
-        "no-tabs": ["error", {"allowIndentationTabs": true} ],
-        "indent": ["error", "tab"]
-    }
+		// Disabled rules
+		"require-jsdoc": 0,
+		"valid-jsdoc": 0,
+		"arrow-parens": 0,
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"indent": ["error", "tab"]
+	}
 }
