@@ -2,11 +2,11 @@ import { hot } from "../../../node_modules/react-hot-loader/root";
 import React, {
 	Component,
 	ReactNode,
-} from 'react';
+} from "react";
 import {
 	HelloClassComponent,
 	HelloFunctionComponent,
-} from '../Hello/Hello';
+} from "../Hello/Hello";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IState {
@@ -31,7 +31,7 @@ class App extends Component<
 		//     cursor: "pointer"
 		// };
 		return (
-			<div className='App'>
+			<div className="App">
 				{/* <FontAwesomeIcon className="home" icon="coffee" /> */}
 				<h1>
 					Hello React
@@ -42,12 +42,12 @@ class App extends Component<
                 <FontAwesomeIcon icon={['fab', 'microsoft']} />
                 <FontAwesomeIcon icon={['fab', 'google']} /> */}
 				<HelloClassComponent
-					compiler='class'
-					framework='react'
+					compiler="class"
+					framework="react"
 				/>
 				<HelloFunctionComponent
-					compiler='function'
-					framework='react'
+					compiler="function"
+					framework="react"
 				/>
 				<HelloClassComponent />
 				<HelloFunctionComponent />

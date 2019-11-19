@@ -9,8 +9,9 @@
 		"container": "webpack-dev-server --host 0.0.0.0 --open --hot --config webpack.dev.js",
 		"watch": "webpack -w",
 		"eslint": "eslint --fix src/",
+		"prettier": "prettier --check src/**/*.{js,jsx,tsx}",
 		"pretty": "prettier --write src/**/*.{js,jsx,tsx}",
-		"format": "npm run pretty && npm run eslint"
+		"format": "npm run prettier && npm run eslint"
 	},
 	"keywords": [],
 	"author": "",

@@ -4,7 +4,7 @@ import React, {
 	ReactElement,
 	FunctionComponent,
 	FC,
-} from 'react';
+} from "react";
 
 export interface HelloProps {
 	compiler?: string;
@@ -12,8 +12,8 @@ export interface HelloProps {
 }
 
 const defaultHelloProps: HelloProps = {
-	compiler: 'compiler',
-	framework: 'framework',
+	compiler: "compiler",
+	framework: "framework",
 };
 
 // SFC => Stateless Functional Component for setting default props
@@ -21,7 +21,7 @@ export const HelloFunctionComponent: FC<HelloProps> = (
 	props: HelloProps,
 ): ReactElement => (
 	<h1>
-		Hello from {props.compiler} and{' '}
+		Hello from {props.compiler} and{" "}
 		{props.framework} from
 		Functional Component
 	</h1>
@@ -37,10 +37,10 @@ export class HelloClassComponent extends Component<
 	render(): ReactNode {
 		return (
 			<h1>
-				Hello from{' '}
-				{this.props.compiler}{' '}
-				and{' '}
-				{this.props.framework}{' '}
+				Hello from{" "}
+				{this.props.compiler}{" "}
+				and{" "}
+				{this.props.framework}{" "}
 				from Class Component
 			</h1>
 		);
