@@ -25,6 +25,7 @@ const config = {
 			".ts",
 			".tsx",
 			".js",
+			".ts",
 		],
 	},
 	module: {
@@ -57,7 +58,7 @@ const config = {
 			cleanStaleWebpackAssets: true,
 			protectWebpackAssets: true,
 			cleanAfterBeforeBuildPatterns: [
-				"./**/*.(js|jsx|tsx)",
+				"./**/*.(js|jsx|ts|tsx)",
 			],
 		}),
 		new HtmlWebpackPlugin({

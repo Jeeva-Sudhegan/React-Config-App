@@ -6,13 +6,23 @@
 	},
 	"extends": [
 		"airbnb",
-		"plugin:prettier/recommended"
+		"eslint:recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended"
 	],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
 	},
 	"parser": "@typescript-eslint/parser",
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [ ".js",".jsx",".tsx", ".ts"]
+			}
+		},
+		"react/state-in-constructor": ["error", "always"]
+	},
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -31,13 +41,24 @@
 			"error",
 			"unix"
 		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"tsx": "never",
+				"ts": "never"
+			}
+		],
 		"react/jsx-filename-extension": [
 			"error",
 			{
 				"extensions": [
 					".js",
 					".jsx",
-					".tsx"
+					".tsx",
+					".ts"
 				]
 			}
 		],
@@ -78,8 +99,11 @@
 				"indentLogicalExpressions": true
 			}
 		],
-
+		"react/destructuring-assignment": ["error","always",{ "ignoreClassFields": true }],
+		"react/jsx-closing-bracket-location": [1, {"selfClosing": "props-aligned", "nonEmpty": "after-props"}],
+		// "multiline-comment-style": ["error", "starred-block"],
 		// Disabled rules
+		"react/jsx-indent-props": ["error", "tab"],
 		"require-jsdoc": 0,
 		"valid-jsdoc": 0,
 		"arrow-parens": 0,

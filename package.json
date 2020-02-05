@@ -9,8 +9,8 @@
 		"container": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
 		"watch": "webpack -w",
 		"eslint": "eslint --fix src/",
-		"prettier": "prettier --check src/**/*.{js,jsx,tsx}",
-		"pretty": "prettier --write src/**/*.{js,jsx,tsx}",
+		"prettier": "prettier --check src/**/*.{js,jsx,ts,tsx}",
+		"pretty": "prettier --write src/**/*.{js,jsx,ts,tsx}",
 		"format": "npm run prettier && npm run eslint",
 		"docker-compose-dev": "docker-compose -f docker-compose.yml -f docker-compose-dev.yml up",
 		"docker-compose-prod": "docker-compose -f docker-compose.yml -f docker-compose-prod.yml up"

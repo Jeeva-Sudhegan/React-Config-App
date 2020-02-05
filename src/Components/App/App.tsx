@@ -1,12 +1,11 @@
-import { hot } from "../../../node_modules/react-hot-loader/root";
+/* eslint-disable no-unused-vars */
 import React, {
 	Component,
 	ReactNode,
 } from "react";
-import {
-	HelloClassComponent,
-	HelloFunctionComponent,
-} from "../Hello/Hello";
+import { hot } from "../../../node_modules/react-hot-loader/root";
+import { HelloFunctionComponent } from "../Hello/Hello";
+import { Counter } from "../Counter/Counter";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface IState {
@@ -16,15 +15,19 @@ class App extends Component<
 	{},
 	IState
 > {
-	state: IState = {
-		checked: false,
-	};
-	handleCheck(): void {
-		this.setState({
-			checked: !this.state
-				.checked,
-		});
+	constructor(props) {
+		super(props);
+		this.state = {
+			checked: false,
+		};
 	}
+
+	handleCheck = () => {
+		this.setState(prevState => ({
+			checked: !prevState.checked,
+		}));
+	};
+
 	render(): ReactNode {
 		// const iconChange = this.state.checked ? ["fas", "check-square"] : ["fas", "square"];
 		// const style = {
@@ -41,7 +44,7 @@ class App extends Component<
 				{/* <FontAwesomeIcon icon={['fab', 'apple']} />
                 <FontAwesomeIcon icon={['fab', 'microsoft']} />
                 <FontAwesomeIcon icon={['fab', 'google']} /> */}
-				<HelloClassComponent
+				{/* <HelloClassComponent
 					compiler="class"
 					framework="react"
 				/>
@@ -49,8 +52,11 @@ class App extends Component<
 					compiler="function"
 					framework="react"
 				/>
-				<HelloClassComponent />
+				<HelloClassComponent /> */}
 				<HelloFunctionComponent />
+				<Counter>
+					Click Me!
+				</Counter>
 			</div>
 		);
 	}
