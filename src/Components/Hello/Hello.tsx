@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, {
 	FC,
 	ReactElement,
