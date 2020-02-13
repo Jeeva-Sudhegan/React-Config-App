@@ -1,9 +1,11 @@
 import { useState } from "react";
 
-export const useCounter = initialCount => {
-	const [count, setCount] = useState(
-		initialCount,
-	);
+export const useCounter = (
+	initialCount: number,
+) => {
+	const [count, setCount] = useState<
+		number
+	>(initialCount);
 	const handleClick = (): void => {
 		setCount(
 			(count: number) =>

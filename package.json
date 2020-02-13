@@ -19,6 +19,12 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@fortawesome/fontawesome-common-types": "^0.2.27",
+		"@fortawesome/fontawesome-svg-core": "^1.2.27",
+		"@fortawesome/free-brands-svg-icons": "^5.12.1",
+		"@fortawesome/free-solid-svg-icons": "^5.12.1",
+		"@fortawesome/react-fontawesome": "^0.1.8",
+		"axios": "^0.19.2",
 		"clean-webpack-plugin": "^3.0.0",
 		"html-webpack-plugin": "^3.2.0",
 		"react": "^16.12.0",
@@ -58,7 +64,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run format"
+			"pre-commit": "npm run format && git add ."
 		}
 	},
 	"repository": {

@@ -1,16 +1,13 @@
 import React, {
-	FC,
 	useEffect,
+	ReactElement,
+	FC,
 } from "react";
 import { useCounter } from "../../CustomHooks/useCounter";
 
-export const Counter: FC<{}> = (
-	props: any,
-) => {
-	const {
-		count,
-		handleClick,
-	} = useCounter(0);
+// FC is for including children property in the props
+export const Counter:FC<{}> = props => {
+	const { count, handleClick } = useCounter(0);
 	const { children } = props;
 	useEffect(() => {
 		console.log(

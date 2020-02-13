@@ -1,64 +1,48 @@
 import React, {
-	Component,
-	ReactNode,
+	useState,
+	useEffect,
+	ReactElement,
 } from "react";
-import { hot } from "../../../node_modules/react-hot-loader/root";
 import { HelloFunctionComponent } from "../Hello/Hello";
 import { Counter } from "../Counter/Counter";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TimeCounter from "../TimeCounter/TimeCounter";
 
-interface IState {
-	checked: boolean;
-}
-class App extends Component<
-	{},
-	IState
-> {
-	constructor(props) {
-		super(props);
-		this.state = {
-			checked: false,
-		};
-	}
+// import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+// import { IconLookup, IconDefinition, findIconDefinition, config} from '@fortawesome/fontawesome-svg-core';
 
-	handleCheck = () => {
-		this.setState(prevState => ({
-			checked: !prevState.checked,
-		}));
+// config.observeMutations = true;
+
+
+// const checkedLookup: IconLookup = { prefix: 'fas', iconName: 'check-square' }
+// const checkedIconDefinition: IconDefinition = findIconDefinition(checkedLookup);
+
+// const squareLookup: IconLookup = { prefix: 'fas', iconName: "square" };
+// const squareIconDefinition: IconDefinition = findIconDefinition(squareLookup);
+
+const App = (): ReactElement => {
+	// let iconChange = squareIconDefinition;
+	// let iconChange = 'square';
+
+	// useEffect( () => {
+	// 	// iconChange = checked ? checkedIconDefinition : squareIconDefinition;
+	// 	iconChange = checked ? 'check-square' : 'square';
+	// }, [checked] );
+
+	const style = {
+		cursor: "pointer"
 	};
 
-	render(): ReactNode {
-		// const iconChange = this.state.checked ? ["fas", "check-square"] : ["fas", "square"];
-		// const style = {
-		//     cursor: "pointer"
-		// };
-		return (
-			<div className="App">
-				{/* <FontAwesomeIcon className="home" icon="coffee" /> */}
-				<h1>
-					Hello React
-					Application
-				</h1>
-				{/* <FontAwesomeIcon onClick = {this.handleCheck} style = {style} icon={iconChange} /> */}
-				{/* <FontAwesomeIcon icon={['fab', 'apple']} />
-                <FontAwesomeIcon icon={['fab', 'microsoft']} />
-                <FontAwesomeIcon icon={['fab', 'google']} /> */}
-				{/* <HelloClassComponent
-					compiler="class"
-					framework="react"
-				/>
-				<HelloFunctionComponent
-					compiler="function"
-					framework="react"
-				/>
-				<HelloClassComponent /> */}
-				<HelloFunctionComponent />
-				<Counter>
-					Click Me!
-				</Counter>
-			</div>
-		);
-	}
+	return (
+		<div className="App">
+			<h1> Hello React Application </h1>
+			{/* <FontAwesomeIcon icon = { checkedIconDefinition } />
+			<FontAwesomeIcon onClick = {handleCheck} style = {style} icon = {iconChange} />
+			<FontAwesomeIcon icon = { squareIconDefinition } /> */}
+			<HelloFunctionComponent />
+			<Counter>Click Me!</Counter>
+			<TimeCounter />
+		</div>
+	)
 }
 
-export default hot(App);
+export default App;

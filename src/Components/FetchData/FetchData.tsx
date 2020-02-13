@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import { useFetch } from "../../CustomHooks/useFetch";
 import { FlightList } from "../FlightList/FlightListComponent";
 
-export const FetchData: FC<{}> = () => {
+export const FetchData = (): ReactElement => {
 	const { data } = useFetch({
 		url:"https://api.spacexdata.com/v3/launches",
 	});

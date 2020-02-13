@@ -17,6 +17,7 @@ export const useFetch = ({ url }) => {
 			]);
 		});
 	}, []);
+
 	const handleData = newData => {
 		setData(prevData => [
 			...prevData,
