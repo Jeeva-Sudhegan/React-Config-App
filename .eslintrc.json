@@ -20,6 +20,9 @@
 				"extensions": [ ".js",".jsx",".tsx", ".ts"]
 			}
 		},
+		"react": {
+			"version":"detect"
+		},
 		"react/state-in-constructor": ["error", "always"]
 	},
 	"parserOptions": {

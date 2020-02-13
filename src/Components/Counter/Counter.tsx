@@ -9,16 +9,11 @@ import { useCounter } from "../../CustomHooks/useCounter";
 export const Counter:FC<{}> = props => {
 	const { count, handleClick } = useCounter(0);
 	const { children } = props;
-	useEffect(() => {
-		console.log(
-			"Count is incremented",
-		);
-		return () => {};
-	}, [count]);
 	return (
 		<>
-			<h2>{count}</h2>
+			<h2 data-testid = "count">{count}</h2>
 			<button
+				data-testid = "count-button"
 				type="submit"
 				onClick={handleClick}>
 				{children}

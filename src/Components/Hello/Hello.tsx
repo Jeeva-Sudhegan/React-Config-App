@@ -17,7 +17,7 @@ const defaultHelloProps: HelloProps = {
 export const HelloFunctionComponent = ( props: HelloProps ): ReactElement => {
 	const { compiler, framework } = props;
 	return (
-		<h1>
+		<h1 data-testid = "hello">
 			Hello from {compiler} and{" "}
 			{framework} from Functional
 			Component
@@ -26,24 +26,3 @@ export const HelloFunctionComponent = ( props: HelloProps ): ReactElement => {
 };
 
 HelloFunctionComponent.defaultProps = defaultHelloProps;
-
-/* export class HelloClassComponent extends Component<
-	HelloProps,
-	{}
-> {
-	static defaultProps: HelloProps = defaultHelloProps;
-
-	render(): ReactNode {
-		return (
-			<h1>
-				Hello from{" "}
-				{this.props.compiler}{" "}
-				and{" "}
-				{this.props.framework}{" "}
-				from Class Component
-			</h1>
-		);
-	}
-} */
-
-// ReactNode => JSX element type

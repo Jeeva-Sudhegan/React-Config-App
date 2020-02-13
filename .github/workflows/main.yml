@@ -19,5 +19,7 @@ jobs:
       run: npm install
     - name: Checking the format
       run: npm run format
+    - name: Run testcases
+      run: npm run test
     - name: Build application
       run: npm run build
