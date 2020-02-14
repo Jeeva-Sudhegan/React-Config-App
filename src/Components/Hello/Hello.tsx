@@ -13,8 +13,7 @@ const defaultHelloProps: HelloProps = {
 	framework: "framework",
 };
 
-// SFC => Stateless Functional Component for setting default props
-export const HelloFunctionComponent = ( props: HelloProps ): ReactElement => {
+const HelloFunctionComponent = ( props: HelloProps = defaultHelloProps ): ReactElement => {
 	const { compiler, framework } = props;
 	return (
 		<h1 data-testid = "hello">
@@ -25,4 +24,4 @@ export const HelloFunctionComponent = ( props: HelloProps ): ReactElement => {
 	);
 };
 
-HelloFunctionComponent.defaultProps = defaultHelloProps;
+export default HelloFunctionComponent;

@@ -3,7 +3,7 @@ import {
 	render,
 	fireEvent,
 } from "@testing-library/react";
-import { Counter } from "../Components/Counter/Counter";
+import Counter from "../Components/Counter/Counter";
 
 describe("<Counter />", () => {
 	// To suppress console warning - start

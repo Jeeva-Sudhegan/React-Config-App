@@ -19,7 +19,6 @@ const config = {
 		chunkFilename:
 			"[name].bundle.js",
 	},
-	devtool: "inline-source-map",
 	resolve: {
 		extensions: [
 			".ts",
