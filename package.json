@@ -66,12 +66,6 @@
 		"webpack-cli": "^3.3.10",
 		"webpack-dev-server": "^3.10.1"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run format && git add .",
-			"pre-push": "npm run test"
-		}
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Jeeva-Sudhegan/React-Config-App.git"
