@@ -24,7 +24,7 @@ const config = {
 			".ts",
 			".tsx",
 			".js",
-			".ts",
+			".jsx",
 		],
 	},
 	module: {
@@ -36,7 +36,7 @@ const config = {
 				use: "ts-loader",
 			},
 			{
-				test: /\.(js)$/,
+				test: /\.(js|jsx)$/,
 				exclude:
 					"/node_modules/",
 				use: "babel-loader",
