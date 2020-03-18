@@ -5,24 +5,13 @@ import {
 } from "react";
 
 export const useFetch = ({ url }) => {
-	const [data, setData] = useState<
-		Array<any>
-	>([]);
+	let data;
 	useEffect(() => {
-		axios.get(url).then(result => {
-			const resp = result.data;
-			setData(prevData => [
-				...prevData,
-				...resp,
-			]);
-		});
+		data = axios
+			.get(url)
+			.then(
+				result => result.data,
+			);
 	}, []);
-
-	const handleData = newData => {
-		setData(prevData => [
-			...prevData,
-			newData,
-		]);
-	};
-	return { data, handleData };
+	return data;
 };
