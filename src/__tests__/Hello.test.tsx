@@ -25,7 +25,9 @@ describe("<HelloFunctionComponent />", () => {
 	const originalError = console.error;
 
 	beforeAll(() => {
-		console.error = (...args) => {
+		console.error = (
+			...args: Array<any>
+		) => {
 			if (
 				/Warning.*not wrapped in act/.test(
 					args[0],
