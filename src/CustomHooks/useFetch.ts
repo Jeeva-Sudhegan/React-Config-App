@@ -5,9 +5,9 @@ import {
 } from "react";
 
 export const useFetch = ({ url }) => {
-	const [data, setData] = useState(
-		[],
-	);
+	const [data, setData] = useState<
+		Array<any>
+	>([]);
 	useEffect(() => {
 		axios.get(url).then(result => {
 			const resp = result.data;

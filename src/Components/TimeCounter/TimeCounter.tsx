@@ -1,7 +1,7 @@
 import React, { useEffect, useState, ReactElement } from "react";
 
 const TimeCounter = (): ReactElement => {
-    let interval = null;
+    let interval;
     const [ checked, setChecked ] = useState( false );
 	const handleCheck = () => {
 		setChecked( prevChecked => !prevChecked );
