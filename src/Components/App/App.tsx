@@ -21,7 +21,7 @@ const App = (): ReactElement => {
 	<div className="App">
 		<h1> Hello React Application </h1>
 		<Suspense fallback = { <div style = { loadingStyle }>Loading...</div> }>
-			<HelloFunctionComponent />
+			<HelloFunctionComponent compiler="C" framework="React" />
 			<Counter>Click Me!</Counter>
 			<button onClick = { handleCheck } >Display</button>
 			{ checked && <TimeCounter /> }
