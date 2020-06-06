@@ -1,5 +1,6 @@
 import React, {
 	FC,
+	memo,
 	ReactElement,
 } from "react";
 
@@ -24,4 +25,4 @@ const HelloFunctionComponent = ( props: HelloProps = defaultHelloProps ): ReactE
 	);
 };
 
-export default HelloFunctionComponent;
+export default memo(HelloFunctionComponent);

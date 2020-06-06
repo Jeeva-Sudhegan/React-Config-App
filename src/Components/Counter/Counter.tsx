@@ -1,10 +1,10 @@
 import React, {
-	FC,
+	FC, memo,
 } from "react";
 import { useCounter } from "../../CustomHooks/useCounter";
 
 // FC is for including children property in the props
-const Counter:FC<{}> = props => {
+const Counter:FC<{ children : string }> = props => {
 	const { count, handleClick } = useCounter(0);
 	const { children } = props;
 	return (
@@ -20,4 +20,4 @@ const Counter:FC<{}> = props => {
 	);
 };
 
-export default Counter;
+export default memo(Counter);
