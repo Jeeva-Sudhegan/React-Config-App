@@ -5,6 +5,7 @@
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watchAll",
+		"test:coverage": "jest --coverage",
 		"build": "webpack --config webpack.prod.js",
 		"dev": "webpack-dev-server --config webpack.dev.js",
 		"container": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
