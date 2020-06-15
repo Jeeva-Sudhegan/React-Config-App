@@ -25,4 +25,10 @@ module.exports = {
     // Module file extensions for importing
     moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 
+    //moduleNameMapper for neglecting some files
+    // here I used for CSS files
+    moduleNameMapper: {
+      "^.+\\.(css|less)$":"identity-obj-proxy"
+    }
+
   };
