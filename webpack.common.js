@@ -15,9 +15,23 @@ const config = {
 			__dirname,
 			"build",
 		),
-		filename: "[name].bundle.js",
+		filename:
+			"[name].[contenthash:8].js",
 		chunkFilename:
-			"[name].bundle.js",
+			"[name].[contenthash:8].js",
+	},
+	optimization: {
+		moduleIds: "hashed",
+		runtimeChunk: "single",
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: "vendors",
+					chunks: "all",
+				},
+			},
+		},
 	},
 	resolve: {
 		extensions: [

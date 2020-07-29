@@ -81,7 +81,7 @@
 		"prefer-const": "error",
 		"curly": [
 			"error",
-			"multi-line"
+			"multi-or-nest"
 		],
 		"react/jsx-indent": [
 			2,
