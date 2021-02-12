@@ -16,7 +16,7 @@ jobs:
     - name: Check whether Script runs
       run: echo Hello, world!!
     - name: Testing secret
-      run: echo ${{ secrets.TEST_SECRET }}
+      run: echo ${{ secrets.COLLAB_SECRET }}
     - name: Install Dependencies
       run: npm install
     - name: Checking the format
